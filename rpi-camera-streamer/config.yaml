@@ -1,0 +1,26 @@
+name: "RPi 5 Camera Streamer"
+description: "CSI/USB camera streamer for Home Assistant."
+version: "1.0.0"
+slug: "rpi5_camera_streamer"
+arch:
+  - aarch64
+init: false
+privileged:
+  - SYS_RAWIO
+devices:
+  - /dev/video0:/dev/video0
+  - /dev/video1:/dev/video1
+  - /dev/dma_heap:/dev/dma_heap
+host_network: true
+options:
+  camera_path: "0"
+  resolution: "2028x1520"
+  framerate: 30
+  bitrate: 15000000
+  h264_profile: "high"
+schema:
+  camera_path: "str"
+  resolution: "list(4056x3040|2028x1520|1920x1080|1280x720)"
+  framerate: "int(1..60)"
+  bitrate: "int(1000000..40000000)"
+  h264_profile: "list(baseline|main|high)"

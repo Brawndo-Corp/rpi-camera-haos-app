@@ -1,4 +1,4 @@
-name: "RPi 5 Camera Streamer"
+name: "RPi Camera Streamer"
 description: "CSI/USB camera streamer for Home Assistant."
 version: "1.0.0"
 slug: "rpi5_camera_streamer"

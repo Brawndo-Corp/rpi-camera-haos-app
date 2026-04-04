@@ -23,7 +23,7 @@ options:
   camera_path: "0"
   resolution: "2028x1520"
   framerate: 30
-  bitrate: 15000000
+  bitrate: 25000000
   h264_profile: "high"
 privileged:
   - PERFMON

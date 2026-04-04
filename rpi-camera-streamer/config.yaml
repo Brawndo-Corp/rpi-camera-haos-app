@@ -1,5 +1,5 @@
 name: "RPi Camera Streamer (Full Access)"
-version: "1.0.2"
+version: "1.0.1"
 panel_icon: "mdi:cctv"
 panel_title: RPi Camera Streamer
 slug: "rpi-camera-streamer"

@@ -47,9 +47,12 @@ rpicam-vid \
     -o - | ffmpeg \
         -hide_banner \
         -loglevel error \
+        -use_wallclock_as_timestamps 1 \
+        -framerate "${FPS}" \
         -f h264 \
         -i - \
         -c copy \
+        -fflags +genpts \
         -f rtsp \
         -rtsp_transport tcp \
         rtsp://localhost:8554/live

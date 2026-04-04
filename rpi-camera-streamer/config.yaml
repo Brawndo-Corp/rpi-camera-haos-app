@@ -1,22 +1,23 @@
-name: RPi Camera Streamer (Full Access)
-version: "1.0.1"
+name: "RPi Camera Streamer (Full Access)"
+version: "1.0.2"
 panel_icon: "mdi:cctv"
 panel_title: RPi Camera Streamer
 slug: "rpi_camera_streamer"
-description: "High-performance CSI/USB camera streamer for Frigate, optimized for RPi 5 and IMX500."
+description: "High-performance CSI/USB camera streamer, optimized for RPi 5 and IMX500."
 url: "https://github.com/Brawndo-Corp/rpi-camera-haos-app"
 image: ghcr.io/Brawndo-Corp/rpi-camera-haos-app
 startup: services
 boot: auto
 init: false
 full_access: true
-protected: false
+protected: false  
 host_network: true
 devices:
   - /dev/video0:/dev/video0
   - /dev/video1:/dev/video1
   - /dev/dma_heap:/dev/dma_heap
   - /dev/media0:/dev/media0
+  - /dev/media1:/dev/media1
 options:
   camera_path: "0"
   resolution: "2028x1520"
@@ -25,6 +26,7 @@ options:
   h264_profile: "high"
 privileged:
   - PERFMON
+  - SYS_RAWIO
 schema:
   camera_path: str
   resolution: list(4056x3040|2028x1520|1920x1080|1280x720)

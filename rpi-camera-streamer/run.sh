@@ -43,9 +43,11 @@ rpicam-vid \
     --flush \
     --denoise cdn_off \
     --nopreview \
+    --libav-format h264 \
     -o - | ffmpeg \
         -hide_banner \
         -loglevel error \
+        -f h264 \
         -i - \
         -c copy \
         -f rtsp \

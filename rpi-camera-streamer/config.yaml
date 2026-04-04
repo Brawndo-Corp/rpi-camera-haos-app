@@ -6,12 +6,13 @@ slug: "rpi-camera-streamer"
 description: "High-performance CSI/USB camera streamer, optimized for RPi 5 and IMX500."
 url: "https://github.com/Brawndo-Corp/rpi-camera-haos-app"
 image: ghcr.io/Brawndo-Corp/rpi-camera-haos-app
-startup: services
+startup: application
 boot: auto
 init: false
 full_access: true
 protected: false  
 host_network: true
+host_ipc: true
 devices:
   - /dev/video0:/dev/video0
   - /dev/video1:/dev/video1

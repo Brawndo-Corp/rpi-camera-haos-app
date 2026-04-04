@@ -1,8 +1,7 @@
-# Use the Home Assistant base image for RPi 5 (aarch64)
 ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base-debian:bookworm
 FROM ${BUILD_FROM}
 
-# Install RPi Camera Stack and MediaMTX dependencies
+# Install RPi Camera Stack, MediaMTX dependencies, and FFmpeg
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libcamera-apps-lite \
     libcamera-v4l2 \

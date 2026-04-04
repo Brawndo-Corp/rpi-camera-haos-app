@@ -1,3 +1,5 @@
+**This README.md is 100% AI btw.**
+
 # 📸 RPi Camera Streamer for HAOS
 
 ![Version](https://img.shields.io/badge/version-1.1.0-blue.svg) ![Home Assistant](https://img.shields.io/badge/Home%20Assistant-OS-41BDF5?logo=home-assistant) ![Architecture](https://img.shields.io/badge/architecture-aarch64-green.svg)

@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base-debian:bookworm
+ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base-debian:trixie
 FROM ${BUILD_FROM}
 
 # Install RPi Camera Stack, MediaMTX dependencies, and FFmpeg
@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     mkdir -p /usr/share/keyrings \
     && curl -fsSL https://archive.raspberrypi.com/debian/raspberrypi.gpg.key \
         | gpg --dearmor -o /usr/share/keyrings/raspberrypi-archive-keyring.gpg \
-    && echo "deb [signed-by=/usr/share/keyrings/raspberrypi-archive-keyring.gpg] http://archive.raspberrypi.com/debian/ bookworm main" \
+    && echo "deb [signed-by=/usr/share/keyrings/raspberrypi-archive-keyring.gpg] http://archive.raspberrypi.com/debian/ trixie main" \
         > /etc/apt/sources.list.d/raspi.list \
     && apt-get update && apt-get install -y --no-install-recommends \
         libcamera-apps \

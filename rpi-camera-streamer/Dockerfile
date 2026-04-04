@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base-debian:bookworm
+ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base-debian:trixie
 FROM ${BUILD_FROM}
 
 # Install RPi Camera Stack, MediaMTX dependencies, and FFmpeg
